@@ -1,3 +1,3 @@
-animal=10
+
 chickens= 6
-print(animal- chickens)
+print(10- chickens)
