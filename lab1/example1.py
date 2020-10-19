@@ -1,5 +1,4 @@
+x = eval(input(print("degree"))
 
-x=1
-y=4
-z=0.25
-print(((2x+y)*(2x+y))z**/x**+y**)
+y = x*1.8+32
+print(y)
