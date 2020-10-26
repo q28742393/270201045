@@ -1,9 +1,12 @@
-x = int (input("number:"))
-if (x < 0):
-  print(x * -1)
-if (x >= 0):
-  print(x)
-else:
-  print('write valid number') 
- 
-        
+gpa = float (input("gpa: "))
+lecture = float (input("lecture: "))
+if (gpa<2.0):
+  if (lecture<47):
+    print ("not enough lectures and gpa")
+  elif (lecture >= 47):
+    print("not enogh gpa")
+elif (gpa>=2.0):
+   if (lecture < 47):
+     print("not enough lecture")
+   elif(lecture>=47):
+     print("graduated")  
