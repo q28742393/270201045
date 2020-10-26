@@ -1,12 +1,9 @@
-gpa = float (input("gpa: "))
-lecture = float (input("lecture: "))
-if (gpa<2.0):
-  if (lecture<47):
-    print ("not enough lectures and gpa")
-  elif (lecture >= 47):
-    print("not enogh gpa")
-elif (gpa>=2.0):
-   if (lecture < 47):
-     print("not enough lecture")
-   elif(lecture>=47):
-     print("graduated")  
+ticket_price = 3
+age = int(input("how old are you? "))
+
+if (age<6 or age>60):
+  print("free")
+elif (6<age<18):
+  print(ticket_price/2)
+else:
+  print(ticket_price)  
