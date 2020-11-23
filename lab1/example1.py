@@ -1,9 +1,20 @@
-ticket_price = 3
-age = int(input("how old are you? "))
+email = input("Please enter an email address:")
 
-if (age<6 or age>60):
-  print("free")
-elif (6<age<18):
-  print(ticket_price/2)
+ref_mail = "ceng113@example.com"
+
+if "@" in email: 
+  email =  email.lower()
+part_1 = email.split("@")[0]
+part_1 = part_1.replace(".", "")
+part_2 = email.split("@")[1]
+email = part_1 + "@" + part_2
+
+print(email)
+
+if email == ref_mail:
+
+  print("Equal")
+
 else:
-  print(ticket_price)  
+
+   print("Not equal")
