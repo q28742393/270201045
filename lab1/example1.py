@@ -1,20 +1,13 @@
-email = input("Please enter an email address:")
+def hailstone(n):
+  s=str(n)
 
-ref_mail = "ceng113@example.com"
+  if n==1:
+    return s
 
-if "@" in email: 
-  email =  email.lower()
-part_1 = email.split("@")[0]
-part_1 = part_1.replace(".", "")
-part_2 = email.split("@")[1]
-email = part_1 + "@" + part_2
+  if n%2 ==0:
+    return s+","+hailstone(n//2)
+  else:
+    return s+","+hailstone((3*n)+1)
 
-print(email)
-
-if email == ref_mail:
-
-  print("Equal")
-
-else:
-
-   print("Not equal")
+print(hailstone(11))
+  
