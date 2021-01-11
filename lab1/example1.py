@@ -1,11 +1,26 @@
-def sum_of_a_nested_list(x):
-   if not isinstance(x, list):
-     return x
-   else:
-     sum = 0
-     for a in x:
-        sum += sum_of_a_nested_list(a)
-     return sum
-
-
-print(sum_of_a_nested_list([3, 12, 76, [4, 56, 43], [2, 8], 81, 75]))
+import math
+class Cylinder:
+ def __init__(self,radius,height):
+  self.set_radius(radius)
+  self.set_height(height)
+ def get_radius(self):
+  return self.radius
+ def set_radius(self,radius):
+  if radius>0:
+    self.radius = radius
+ def get_height(self):
+   return self.height
+ def set_height(self,height):
+  if height>0:
+   self.height = height
+ def calc_base_area(self):
+   return math.pi * (self.radius**2)
+ def calc_surface_area(self):
+   return 2 * (math.pi * self.radius) * self.height
+ def calc_area(self):
+  return 2 * self.calc_base_area() + self.calc_surface_area()
+ def calc_volume(self):
+  return self.calc_base_area() * self.height
+cylinder = Cylinder(3,5)
+print ("Area:",cylinder.calc_area())
+print ("Volume:",cylinder.calc_volume())
